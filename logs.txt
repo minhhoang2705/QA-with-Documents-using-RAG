@@ -1,0 +1,39 @@
+2024-06-30 14:09:43 - Created default config file at /workspaces/QA-with-Documents-using-RAG/.chainlit/config.toml
+2024-06-30 14:09:43 - Created default translation directory at /workspaces/QA-with-Documents-using-RAG/.chainlit/translations
+2024-06-30 14:09:43 - Created default translation file at /workspaces/QA-with-Documents-using-RAG/.chainlit/translations/en-US.json
+2024-06-30 14:09:54 - Use pytorch device_name: cpu
+2024-06-30 14:09:54 - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/opt/conda/envs/rag-with-docs/bin/chainlit", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/chainlit/cli/__init__.py", line 201, in chainlit_run
+    run_chainlit(target)
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/chainlit/cli/__init__.py", line 66, in run_chainlit
+    load_module(config.run.module_name)
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/chainlit/config.py", line 416, in load_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workspaces/QA-with-Documents-using-RAG/app.py", line 75, in <module>
+    llm = get_huggingface_llm()
+  File "/workspaces/QA-with-Documents-using-RAG/app.py", line 53, in get_huggingface_llm
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3202, in from_pretrained
+    hf_quantizer.validate_environment(
+  File "/opt/conda/envs/rag-with-docs/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 62, in validate_environment
+    raise RuntimeError("No GPU found. A GPU is needed for quantization.")
+RuntimeError: No GPU found. A GPU is needed for quantization.
